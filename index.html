@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Финансовый Трекер</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Финансовый Трекер</h1>
+    <div class="summary">
+      <div class="summary-item">
+        <p>Заработано: <span id="earned">0</span></p>
+      </div>
+      <div class="summary-item">
+        <p>Потрачено: <span id="spent">0</span></p>
+      </div>
+      <div class="summary-item">
+        <p>Сбережения: <span id="savings">0</span></p>
+      </div>
+    </div>
+    <canvas id="financeChart"></canvas>
+    <form id="entryForm">
+      <input type="text" id="entryName" placeholder="Введите название транзакции" required />
+      <input type="number" id="entryAmount" placeholder="Сумма" required />
+      <select id="entryType">
+        <option value="earned">Заработано</option>
+        <option value="spent">Потрачено</option>
+      </select>
+      <button type="submit">Добавить Транзакцию</button>
+    </form>
+    <a href="goals.html" class="link">Перейти к Целям</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>

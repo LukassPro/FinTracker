@@ -1,0 +1,136 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1E2A47; /* Синий фон */
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #ffdd57; /* Желтый текст */
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Container for all content */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #1e3a62; /* Темно-синий фон контейнера */
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Summary Section */
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.summary-item {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #364f76;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Graph */
+#financeChart {
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  background-color: #ffdd57; /* Желтый фон для графика */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+input,
+select,
+button {
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #000; /* Черная обводка */
+  font-size: 1rem;
+  background-color: #2f3c58;
+  color: #fff;
+}
+
+button {
+  background-color: #1e2a47;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #364f76; /* Темно-синие кнопки */
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #ffdd57;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .summary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary-item {
+    margin-bottom: 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
